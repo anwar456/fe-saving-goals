@@ -2,7 +2,7 @@ import store from '@app/store'
 import { logoutUser } from '@app/store/reducers/auth'
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 
-const baseURL = 'http://localhost:5000'
+const baseURL = 'https://api-saving-goals.vercel.app'
 
 const instance = axios.create({
   baseURL,
