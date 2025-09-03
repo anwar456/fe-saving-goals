@@ -42,7 +42,13 @@ export default function CardMonthlySaving() {
             </DFlexColumn>
           </Card.Header>
           <Card.Body>
-            <MonthlySavingChart data={data} />
+            {data?.length > 0 ? (
+              <MonthlySavingChart data={data} />
+            ) : (
+              <div className='d-flex justify-content-center align-items-center h-100'>
+                <p className="text-muted m-0">No Data</p>
+              </div>
+            )}
           </Card.Body>
         </Card>
       )}
